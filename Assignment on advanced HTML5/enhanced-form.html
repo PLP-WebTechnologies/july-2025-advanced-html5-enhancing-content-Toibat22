@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enhanced HTML5 Content & Form</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: white;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 8px;
+    }
+    fieldset {
+      margin-bottom: 20px;
+      padding: 15px;
+    }
+    legend {
+      font-weight: bold;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      margin-top: 10px;
+    }
+    input, select, textarea {
+      padding: 8px;
+      width: 100%;
+      max-width: 400px;
+    }
+    button {
+      padding: 10px 20px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to My Enhanced HTML5 Page</h1>
+    <p>This page demonstrates lists, tables, media, and a complete form.</p>
+  </header>
+
+  <!-- Section: Lists -->
+  <section>
+    <h2>My Daily Routine</h2>
+    <ol>
+      <li>Wake up</li>
+      <li>Pray</li>
+      <li>Brush my teeth</li>
+      <li>Read for 30 minutes</li>
+      <li>Take my bath</li>
+      <li>Eat</li>
+      <li>Attend my coding class</li>
+    </ol>
+
+    <h3>Shopping List</h3>
+    <ul type="square">
+      <li>Beverages</li>
+      <li>Household items</li>
+      <li>Groceries</li>
+      <li>Baking supplies</li>
+      <li>Canned goods</li>
+      <li>Toiletries</li>
+    </ul>
+  </section>
+
+  <!-- Section: Table -->
+  <section>
+    <h2>Weekly Schedule</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Activity 1</th>
+          <th>Activity 2</th>
+          <th>Activity 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Monday</td>
+          <td>Exercise</td>
+          <td>Meal Prep</td>
+          <td>Attends Web Development Class</td>
+        </tr>
+        <tr>
+          <td>Tuesday</td>
+          <td>Exercise</td>
+          <td>Attends Python Class</td>
+          <td>Project Work</td>
+        </tr>
+        <tr>
+          <td>Wednesday</td>
+          <td>Exercise</td>
+          <td>Revision of Previous Class Works</td>
+          <td>Relaxation Time</td>
+        </tr>
+        <tr>
+          <td>Thursday</td>
+          <td>Exercise</td>
+          <td>Attends Database Class</td>
+          <td>Getting Assignments Done</td>
+        </tr>
+        <tr>
+          <td>Friday</td>
+          <td>Attends Startup Building Class</td>
+          <td>Review Week</td>
+          <td>Plans for Weekend</td>
+        </tr>
+        <tr>
+          <td>Saturday</td>
+          <td>House Chores/Errands</td>
+          <td>Attends Trivia Session</td>
+          <td>Outdoor Activities</td>
+        </tr>
+        <tr>
+          <td>Sunday</td>
+          <td>Reflection/Goal Setting</td>
+          <td>Meal Prep</td>
+          <td>Relaxation</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Section: Media -->
+  <section>
+    <h2>Media Content</h2>
+    <h3>My Favorite Picture</h3>
+    <img src="Taye_pic.jpeg" alt="My fave pic" width="400" />
+
+    <h3>Favorite Song</h3>
+    <audio controls>
+      <source src="MY MOTHER.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <h3>Short Video Clip</h3>
+    <video width="400" controls>
+      <source src="A short video clip.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <!-- Section: Form -->
+  <section>
+    <h2>Registration Form</h2>
+    <form action="mailto:abdulhammedtoibat@gmail.com" method="post">
+      
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname" required placeholder="Enter your first name" minlength="2" />
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lname" required placeholder="Enter your last name" minlength="2" />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required autocomplete="on" />
+        
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{11}" placeholder="e.g., 08083058985" required />
+      </fieldset>
+
+      <fieldset>
+        <legend>Account Details</legend>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required pattern="[A-Za-z0-9_]{5,}" placeholder="At least 5 characters" />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required minlength="6" />
+
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender" required>
+          <option value="">--Select--</option>
+          <option value="female">Female</option>
+          <option value="male">Male</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label for="bio">Short Bio</label>
+        <textarea id="bio" name="bio" placeholder="Tell us something about yourself" rows="4"></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Other Information</legend>
+        <label>
+          <input type="checkbox" name="agree" required />
+          I agree to the terms and conditions
+        </label>
+
+        <label for="ref">Referral Code</label>
+        <input type="text" id="ref" name="ref" value="HTML2025" readonly />
+      </fieldset>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 HTML5 Assignment by [Abdulhammed Toibat Taye]</p>
+  </footer>
+
+</body>
+</html>
